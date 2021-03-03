@@ -25,16 +25,45 @@
 }
 
 
-.side-bar-header{
+.side-bar-header {
   height: 100px;
   padding: 0 20px;
+  display: flex;
+  background-color: #253141;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create-room a {
+  border: 1px solid lightblue;
+  font-size: 10px;
+  color: deepskyblue;
+  text-decoration: none;
+  padding: 14px;
+}
+
+.header-name a{
+  color: #fafafa;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .rooms {
-  height: 100vh - 100px;
+  height: calc(100vh - 100px);
   background-color: #2f3e51;
   padding: 0 20px;
+  overflow: scroll;
 }
+
+.room {
+  padding: 20px 0 40px;
+}
+
+.room-name a {
+  text-decoration: none;
+  color: white;
+}
+
 
 .form {
   background-color: #dddddd;
