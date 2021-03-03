@@ -2,6 +2,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
+    @messages = @room.messages.includes(:user) #チャットルームに紐づいている(@room.message)を@messagesと定義。
   end
 
   def create          #messagesコントローラーにcreateアクションを定義します。
@@ -10,7 +11,8 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to room_messages_path(@room)
     else
-     render :index
+      @messages = @room.messages.includes(:user)
+      render :index
     end      #createアクション内に、メッセージを保存できた場合とできなかった場合で条件分岐の処理を行います。
   end
   private
