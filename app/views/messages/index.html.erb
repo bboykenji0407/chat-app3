@@ -1,4 +1,8 @@
 <div class="wrapper">       <%#サイドバーとチャット画面の部分テンプレートを読み込むように設定%>
-  <%= render "side_bar" %>
-  <%= render "main_chat" %>　　<%#部分テンプレートの読み込みなのでファイル頭のアンダーバー、拡張子はいらない%>
+  <div class="side-bar">
+    <%= render "side_bar" %>
+  </div>
+  <div class="chat">
+    <%= render "main_chat" %>　　<%#部分テンプレートの読み込みなのでファイル頭のアンダーバー、拡張子はいらない%>
+  </div>
 </div>
